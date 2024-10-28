@@ -1,28 +1,6 @@
-/*
-|--------------------------------------------------------------------------
-| Routes file
-|--------------------------------------------------------------------------
-|
-| The routes file is used for defining the HTTP routes.
-|
-*/
-
 import router from '@adonisjs/core/services/router'
+import adminRoute from './routes/v1/admin.js'
+import memberRoute from './routes/v1/member.js'
 
-router.get('/', async () => {
-  return {
-    hello: 'world',
-  }
-})
-
-router.get('/server', async () => {
-  return {
-    hello: 'world',
-  }
-})
-
-router.get('/celebrate', async () => {
-  return {
-    hello: 'world',
-  }
-})
+adminRoute(router)
+memberRoute(router)
